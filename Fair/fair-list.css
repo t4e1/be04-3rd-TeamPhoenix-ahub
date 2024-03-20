@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+header {
+    height: 70px;
+    background-color: rgb(223, 211, 211);
+    border: solid 1px black;
+}
+
+footer {
+    height: 80px;
+    background-color: rgb(223, 211, 211);
+    border: solid 1px black;
+}
+
+section {
+    height: 998px;
+    border: solid 1px black;
+}
+
+.banner {
+    height: 290px;
+    border: solid 1px black;
+    background-color: purple;
+}
+
+.side-section {
+    background-color: gray;
+    border: solid 1px black;
+    margin: auto;
+
+}
+
+.main-section { 
+    background-color: rgb(188, 98, 98);
+    border: solid 1px black;
+}
+
+.test {
+    font-size: 11px;
+}
+
+#article-title {
+    float:left;
+    background-color: aquamarine;
+    border: solid 1px black;
+    height: 115px;
+    width: 100%;
+}
+
+#article-line {
+    border : solid 1px gray;
+    height: auto;
+}
+#article-main {
+    background-color: plum;
+    border: 1px solid black;
+    height: auto;
+}
+
+
+#artice-child1 {
+    border: red solid 1px;
+    height: 150px;
+    font-size: 35pt;
+}
+
+#artice-child2 {
+    border: red solid 1px;
+    height: 150px;
+    width: 80%;
+    text-align:right;
+}
