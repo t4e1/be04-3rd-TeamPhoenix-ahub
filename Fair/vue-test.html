@@ -17,7 +17,7 @@
     <header class="global-header">
         <nav class="head-nav">
 
-        </nav>        
+        </nav>
     </header>
 
     <section class="container">
@@ -29,19 +29,46 @@
         </div>
         <div class="titleAndSearch">
             <div class="title">
-                제목이랑 검색
+                <h2>페어 정보</h3>
             </div>
             <div class="search">
-                <div class="searchBar">
-                    <input type="search" >
-                </div>
+                <div id="searchTemplate">
 
+                    <select v-model="search_type" id="searchDropdown">
+                        <option value='titleContent'>&nbsp 제목 내용 &nbsp</option>
+                        <option value='Content'>&nbsp 제목 &nbsp</option>
+                        <option value='title'>&nbsp 내용 &nbsp</option>
+                        <option value='titleContent'>&nbsp 작성자 &nbsp</option>
+                    </select>
+
+                    <input type="text" v-model="search_condition"></input>
+                    <button id="searchBtn" type="button" @change="callData">검색</button>
+                </div>
+                <script>
+                    const {createApp, ref, reactive} = Vue;
+                    createApp({
+                        setup() {
+
+                            const search_type = ref('titleContent');
+                            const search_condition = ref('');
+                            /* 입력한 정보(search_type&search_condition) 받아서 axios로 호출 */
+                            async function callData() {
+                                const searchList = axios.get(`http://localhost:8000/board/fairs/lists?search_type=${search_type.value}&search_condition=${search_condition.value}`);
+                                console.log(searchList);
+                            }
+
+                            return {
+                                selected
+                            }
+                        }
+                    }).mount('#searchTemplate');
+                </script>
             </div>
         </div>
         <hr>
         <article class="main-article">
             <div class="post">
-                게시글이 여기에 반복 
+                게시글이 여기에 반복
                 <div>
 
                 </div>
