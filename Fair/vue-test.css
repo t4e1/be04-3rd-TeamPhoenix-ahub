@@ -20,7 +20,7 @@ section {
     min-width: 100%;
     min-height: 800px;
     grid-template-columns: 0.5fr 3fr 0.5fr; 
-    grid-template-rows: 180px 5% 5px auto;
+    grid-template-rows: 180px 7% 5px auto;
     grid-template-areas: 
                         "banner banner banner"
                         "left  title   right"
@@ -36,6 +36,10 @@ h2 {
     padding: 0;
 }
 
+hr {
+    margin: 5px;
+}
+
 .banner {
     grid-area: banner;
     border: 1px red solid;
@@ -43,6 +47,9 @@ h2 {
 
 .main-article {
     grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     border: 1px red solid;
 }
 
@@ -66,7 +73,7 @@ h2 {
 
 .title {
     display: flex;
-    align-items: stretch;
+    align-items: flex-end;
     width: 27%;
     height: 100%;
     border: 0.5px blue solid;
@@ -76,6 +83,8 @@ h2 {
 
 .search {
     display: flex;
+    flex-wrap: wrap;
+    flex: 0 0 auto;
     width: 72%;
     height: 100%;
     border: 0.5px blue solid;
@@ -93,6 +102,13 @@ h2 {
 #searchDropdown {
     margin: 0;
     border-radius: 4px;
+    height: 36px;
+    /* padding: 6px auto; */
+}
+
+#searchText {
+    height: 36px;
+    border-radius: 4px;
 }
 
 #searchBtn {
@@ -106,6 +122,19 @@ h2 {
     font-size: 16px;
     font-style: bold;
 }
+
+#writeBtn {
+    background-color: #6D31ED;
+    color: white;
+    padding: 6px 10px;
+    margin: 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-style: bold;
+}
+
 
 footer {
     background-color: #6D31ED;
