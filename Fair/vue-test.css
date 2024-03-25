@@ -10,22 +10,24 @@
 }
 
 header {
-    background-color: #6D31ED;
+    background-color: #F8F9FC;
     height: 7vh;
-    min-height:70px;
+    min-height: 70px;
+    position: relative;
+    top: 0;
 }
 
 section {
     display: grid;
     min-width: 100%;
     min-height: 800px;
-    grid-template-columns: 0.5fr 3fr 0.5fr; 
+    grid-template-columns: 0.5fr 3fr 0.5fr;
     grid-template-rows: 180px 7% 5px auto;
-    grid-template-areas: 
-                        "banner banner banner"
-                        "left  title   right"
-                        "left   none    right"
-                        "left   main    right";
+    grid-template-areas:
+        "banner banner banner"
+        "left  title   right"
+        "left   none    right"
+        "left   main    right";
     padding: 0;
     margin: 0;
 }
@@ -39,6 +41,45 @@ h2 {
 hr {
     margin: 5px;
 }
+
+.loginbtn {
+    background-color: #8c52ff;
+    display: flex;
+    flex-direction: colum;
+    align-self: center;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-style: bold;
+    float: right;
+    margin-top: 1.5%;
+    margin-right: 2%;
+}
+
+.logoimage {
+    width: 60px;
+}
+
+.logo {
+    float: left;
+    cursor: pointer;
+    height: 70px;
+    margin: 0;
+    padding: 0;
+}
+
+#menu {
+    text-align: center;
+    float: left;
+    margin-left: 2%;
+    margin-top: 2%;
+    line-height: 30px;
+    cursor: pointer;
+}
+
 
 .banner {
     grid-area: banner;
@@ -83,7 +124,7 @@ hr {
 
 .search {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex: 0 0 auto;
     width: 72%;
     height: 100%;
@@ -141,4 +182,3 @@ footer {
     height: 8vh;
     min-height: 80px;
 }
-
