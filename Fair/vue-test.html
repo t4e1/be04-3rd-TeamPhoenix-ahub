@@ -31,7 +31,7 @@
         </div>
     </header>
 
-    <section class="container">
+    <section class="container" id="global-container">
         <div class="banner">
             <div id="demo" class="carousel slide" data-ride="carousel">
                 <ul class="carousel-indicators">
@@ -65,7 +65,7 @@
             <div class="board-title">
                 <h2 style="font-size: 30px;">페어 정보</h2>
             </div>
-            <div class="search">
+            <div class="search" id="search-1">
                 <div id="searchDropdown">
                     <select class="form-control" name="search_type" v-model="search_type" style="height: 30px;">
                         <option value="titleContent">제목 내용</option>
@@ -75,8 +75,7 @@
                     </select>
                 </div>
                 <div>
-                    <input type="text" id='searchText' class="form-control" placeholder="Search..."
-                        v-model="search_condition">
+                    <input type="text" id='searchText' class="form-control" placeholder="Search..." v-model="search_condition">
                 </div>
                 <div class="">
                     <button class="btn" id="searchBtn" type="button" @click="callData">검색</button>
@@ -88,8 +87,42 @@
             </div>
         </div>
         <article class="main-article">
-            <div class="post">
-                <hr>
+            <hr>
+            <!-- <div class="post-container">
+                <div class="postCard" v-for="card in postResult" :key="postResult.fairId">
+                    <div class="listImg">
+                        <img class="listThumnail" src="postResult.thumImage" alt="dd">
+                    </div>
+                    <div class="listContent">
+                        <div id="content-title">
+                            <div id="postTitle">
+                                {{ postResult.fairTitle }}
+                            </div>
+                            <div id="postNum">
+                                #{{ postResult.fairId }}
+                            </div>
+                        </div>
+                        <div id="content-description">
+                            <div>
+                                {{ postResult.fairContent }}
+                            </div>
+                        </div>
+                        <div id="content-location">
+                            <div class="locaionitem" style="margin: 0 5px 0 0;">
+                                {{ postResult.fairStartdate }}
+                            </div>
+                            <p style="padding: 5px">~</p>
+                            <div class="locaionitem" style="margin: 0 5px 0 0;">
+                                {{ postResult.fairEnddate }}
+                            </div>
+                            <div class="locaionitem">
+                                {{ postResult.fairLocation }} 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div class="post-container">
                 <div class="postCard">
                     <div class="listImg">
                         <img class="listThumnail" src="https://tkfile.yes24.com/upload2/PerfBlog/202208/20220811/20220811-43163.jpg" alt="dd">
@@ -102,10 +135,6 @@
                             <div id="postNum">
                                 #13
                             </div>
-                            <!-- <div id="">
-                                <div><button class="tagbtn1">1</button></div>
-                                <div><button class="tagbtn2">2</button></div>
-                            </div> -->
                         </div>
                         <div id="content-description">
                             <div>
@@ -132,6 +161,7 @@
 
         </div>
     </section>
+    
     <footer class="global-footer">
 
     </footer>
@@ -143,16 +173,25 @@
 
                 const search_type = ref('titleContent');
                 const search_condition = ref('');
+                const postResult = ref([]);
+
                 /* 입력한 정보(search_type&search_condition) 받아서 axios로 호출 */
                 async function callData() {
-                    const searchList = axios.get(`http://127.0.0.1:8000/board/fairs/lists?search_type=${search_type.value}&search_condition=${search_condition.value}`);
+                    
+                    const response = await axios.get(`http://127.0.0.1:8000/board/fairs/lists?search_type=${search_type.value}&search_condition=${search_condition.value}`);
+                    const searchList = response.data;
                     console.log(searchList);
+                    // console.log(JSON.stringify(searchList.result, null, 2));
+
+                    postResult.value = searchList.result;
+                    console.log(postResult.value[0])
                 }
 
                 return {
                     search_type,
                     search_condition,
-                    callData
+                    callData,
+                    postResult
                 }
             }
         }).mount('#search-1');

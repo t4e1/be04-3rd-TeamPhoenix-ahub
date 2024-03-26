@@ -83,7 +83,6 @@ hr {
 
 .banner {
     grid-area: banner;
-
 }
 
 .main-article {
@@ -206,13 +205,6 @@ hr {
     height: 50px;
 }
 
-#content-description{
-    height: 50px;
-}
-
-#content-location{
-    height: 50px;
-}
 
 #postTitle{
     font-size: 18px;
@@ -227,6 +219,7 @@ hr {
 }
 
 #content-description {
+    height: 50px;
     display: flex;
     align-items: center;
     margin: 0 0 0 3px;
@@ -237,7 +230,7 @@ hr {
 #content-location {
     display: flex;
     flex-direction: row;
-    
+    height: 50px;
 }
 .locaionitem {
     width: 70px;
@@ -245,20 +238,6 @@ hr {
     padding: 5px 0 0 3px;
     color:rgb(87, 85, 85);
 }
-
-/* .tagbtn1 {
-    border-radius: 20px;
-    background-color: #e0f7fa;
-    color: #0072e4c6;
-}
-
-.tagbtn2 {
-    border-radius: 20px;
-    background-color: #e9dfff;
-    color: #8c52ff;
-} */
-
-
 
 footer {
     background-color: #F8F9FC;
