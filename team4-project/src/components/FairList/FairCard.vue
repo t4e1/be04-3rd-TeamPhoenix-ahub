@@ -1,7 +1,7 @@
 <template>
     <div class="postCard">
                     <div class="listImg">
-                        <img class="listThumnail" src="https://tkfile.yes24.com/upload2/PerfBlog/202208/20220811/20220811-43163.jpg" alt="dd">
+                        <img class="listThumnail" :src="fair.thumImage" alt="dd">
                     </div>
                     <div class="listContent">
                         <div id="content-title">

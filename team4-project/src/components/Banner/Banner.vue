@@ -12,13 +12,13 @@
             <!-- The slideshow/carousel -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="@/assets/img/testbanner1.png" alt="banner_img" height="180" width="100%">
+                    <img src="@/assets/img/banner1.png" alt="banner_img" height="200" width="100%">
                 </div>
                 <div class="carousel-item">
-                    <img src="@/assets/img/testbanner2.png" alt="banner_img" height="180" width="100%">
+                    <img src="@/assets/img/banner2.png" alt="banner_img" height="200" width="100%">
                 </div>
                 <div class="carousel-item">
-                    <img src="@/assets/img/testbanner3.png" alt="banner_img" height="180" width="100%">
+                    <img src="@/assets/img/testbanner3.png" alt="banner_img" height="200" width="100%">
                 </div>
             </div>
 

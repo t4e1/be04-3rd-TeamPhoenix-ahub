@@ -10,7 +10,8 @@ const router = createRouter({
             component: () => import('../views/FairBoard.vue')
         },
         {
-            path: '/'
+            path: '/',
+            component: () => import('../views/MainPage.vue')
         }
     ]
 })
