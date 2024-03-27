@@ -1,7 +1,8 @@
 <template>
-    <div class="postCard" @click="changeRoute">
+    <div class="postCard" @click="changeRoute(fair.fairId)">
                     <div class="listImg" >
-                        <img class="listThumnail" :src="fair.thumImage" alt="thumb">
+                        <!-- <img class="listThumnail" :src="fair.thumImage" alt="thumb"> -->
+                        <img class="listThumnail" src="https://bsiwse.com/data/designImages/POPUP_1709860556.png" alt="thumb">
                     </div>
                     <div class="listContent">
                         <div id="content-title">
@@ -37,16 +38,14 @@
     import { defineProps } from 'vue';
     import { useRouter } from 'vue-router';
 
-    defineProps(['fair']);
     const router = useRouter();
+    const props = defineProps(['fair']);
+    const fair = props.fair;
 
-    function changeRoute() {
-        const num = 1;
-        // const fairId = fair.value.fairId;
-        router.push(`/board/fairs/${num}`);
-        console.log("클릭함");
+    function changeRoute(fairId) {
+        console.log(props);
+        router.push(`/board/fairs/${fairId}`);
     }
-    // const postResult = inject('postResult');
 </script>
 
 <style scoped>
@@ -54,12 +53,26 @@
     height: 150px;
     display: flex;
     flex-direction: row;
+    width: 100%;
+}
+
+.postCard :hover {
+    cursor: pointer;
 }
 
 .listImg {
     border: 0.5px solid rgb(227, 224, 224);
     width: 27%;
     height: 150px;
+    overflow: hidden;
+}
+
+.listImg img {
+    transition: 0.3s;
+}
+
+.listImg img:hover {
+    transform: scale(1.1);
 }
 
 .listThumnail {
@@ -69,11 +82,17 @@
 }
 
 .listContent {
-
     padding: 0;
     margin: 0;
     border: 0.5px solid rgb(227, 224, 224);
+    overflow: hidden;
+    transition: border-color 0.3s;
     width: 73%;
+}
+
+.postCard:hover .listContent {
+    filter: blur(0.5px);
+    border-color: #d490e0;
 }
 
 #content-title{
@@ -82,6 +101,7 @@
     align-items: flex-end;
     justify-content: flex-start;
     height: 50px;
+
 }
 
 #postTitle{

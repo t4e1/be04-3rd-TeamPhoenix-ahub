@@ -9,7 +9,7 @@
         <Banner />
         <div class="left-sidebar"></div>
         <div class="titleAndSearch">
-            <div class="board-title">
+            <div class="board-title" @click="resetBoard">
                 <h2 style="font-size: 30px;">페어 정보</h2>
             </div>
             <div class="search" id="search-1">
@@ -44,9 +44,10 @@
 </template>
 
 <script setup>
-    import { ref, provide, readonly } from 'vue';
+    import { ref, provide } from 'vue';
     import Banner from '../components/Banner/Banner.vue';
     import FairListContainer from '../components/FairList/FairListContainer.vue';
+    import { useRouter } from 'vue-router';
 
     const search_type = ref('titleContent');
     const search_condition = ref('');
@@ -63,17 +64,16 @@
         postResult.value = response.data.result;
         console.log(postResult.value)
     }
+    const router = useRouter();
+    function resetBoard() {
+        router.go(0);
+    }   
 
     provide('postResult', postResult);
 
 </script>
 
 <style scoped>
-
-
-
-
-/*  */
 
 section {
     display: grid;
@@ -133,6 +133,10 @@ h2 {
     margin: 0;
     padding: 20 0 0 0;
     font-size: 30px;
+}
+
+.board-title :hover {
+    cursor: pointer;
 }
 
 .search {

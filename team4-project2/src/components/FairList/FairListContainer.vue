@@ -1,18 +1,15 @@
 <template>
     <div class="post-container">
-        <!-- <FairCard/> -->
         <FairCard v-for="fair in fairList" :key="fair.fairId" :fair="fair"/>
     </div>
 </template>
 
 <script setup>
-    import { onMounted, inject, ref, defineProps } from "vue";
+    import { onMounted, inject, defineProps } from "vue";
     import FairCard from "./FairCard.vue";
-
 
     const fairList = inject('postResult')
     defineProps(['fairList']);
-    // const fairs = ref([]);
 
     onMounted(async () => {
         const response = await axios.get(`http://127.0.0.1:8000/board/fairs/lists?search_type=titleContent&search_condition=`);

@@ -14,7 +14,7 @@ const router = createRouter({
             component: () => import('../views/MainPage.vue')
         },
         {
-            path: '/board/fairs/1',
+            path: '/board/fairs/:fairId',
             component: () => import('../views/FairPost.vue')
         }
     ]

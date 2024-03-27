@@ -1,22 +1,7 @@
-<script>
-export default {
-    data() {
-        return {
-        };
-    },
-    methods: {
-        editPost() {
-            var fairId = "3";
-            alert('페어 ID: ' + fairId);
-            console.log('게시글이 수정되었습니다. ID:', fairId);
-        }
-    }
-};
-</script>
-
-
 <template>
-    <h1 class="boardname">페어 정보</h1>
+    <div @click="toBoard" class="board-title">
+        <h1 class="boardname">페어 정보</h1>
+    </div>
     <div class="editbtndiv">
         <button class="editbtn" @click="editPost">게시글 수정</button>
     </div>
@@ -71,8 +56,13 @@ export default {
 </template>
 
 <script setup>
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
 
+function toBoard() {
+    router.push('/board/fairs');
+}
 
 </script>
 
@@ -80,6 +70,10 @@ export default {
 * {
     margin: 0;
     padding: 0;
+}
+
+.board-title :hover {
+    cursor: pointer;
 }
 
 .boardname {
