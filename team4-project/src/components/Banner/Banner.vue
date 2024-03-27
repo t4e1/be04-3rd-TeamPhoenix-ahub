@@ -18,7 +18,7 @@
                     <img src="@/assets/img/banner2.png" alt="banner_img" height="200" width="100%">
                 </div>
                 <div class="carousel-item">
-                    <img src="@/assets/img/testbanner3.png" alt="banner_img" height="200" width="100%">
+                    <img src="@/assets/img/banner3.png" alt="banner_img" height="200" width="100%">
                 </div>
             </div>
 

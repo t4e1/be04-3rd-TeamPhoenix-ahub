@@ -79,7 +79,7 @@ section {
     display: grid;
     min-width: 100%;
     min-height: 800px;
-    grid-template-columns: 0.5fr 3fr 0.5fr;
+    grid-template-columns: 0.8fr 3fr 0.8fr;
     grid-template-rows: 200px 101.61px 5px auto;
     grid-template-areas:
         "banner banner banner"
