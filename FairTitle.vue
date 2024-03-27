@@ -43,7 +43,7 @@ async function callData() {
     // console.log(JSON.stringify(searchList.result, null, 2));
 
     postResult.value = searchList.result;
-    console.log(postResult.value[0])
+    console.log(postResult.value)
 }
 </script>
 
