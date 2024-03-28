@@ -8,4 +8,6 @@ import "bootstrap-icons/font/bootstrap-icons.css"
 const app = createApp(App)
 app.use(router);
 app.mount('#app');
-app.config.globalProperties.$axios = axios;
+app.provide('$axios', axios);
+
+// app.config.globalProperties.$axios = axios;

@@ -7,7 +7,7 @@
             </div>
         </div>
         <div class="right-box item">
-            <h1>{{ profile.info.memberId }}</h1>
+            <h3>{{ profile.info.memberId }}</h3>
             <p class="introduction-box">
                 내 소개가 아직 없습니다!
             </p>
@@ -49,7 +49,7 @@ const profile = ref({
 const getData = async (e) => {
     axios.get(
         // localhost 포트번호 변경, /api 붙이기
-        "http://localhost:5174/api/member/findMyprofile/user01"
+        "http://localhost:5175/api/member/findMyprofile/bucky1005"
     ).then((response) => {
         // console.log(response.data);
         if (response.status == 200) {
@@ -80,11 +80,12 @@ onMounted(() => {
     display: grid;
     grid-template-columns: 0.4fr 0.6fr;
     grid-template-rows: 1fr 1fr;
-    grid-gap: 20px;
+    grid-gap: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
     margin: 10px;
     padding: 40px;
+    padding-top: 80px;
     background-color: #f9f9f9;
 }
 
@@ -134,6 +135,9 @@ span>button {
     object-fit: cover;
 }
 
+h3 {
+    font-weight: 700;
+}
 .introduction-box {
     width: 60%;
     height: 50%;

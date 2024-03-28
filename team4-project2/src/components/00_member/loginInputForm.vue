@@ -15,7 +15,7 @@
                 <span><a href="#"><RouterLink to ='/member/regist'>회원 가입</RouterLink></a> </span>
             </div>
         </div>
-        <button @click.prevent="[inputCheck(), tokenData(), changeRouter()]">Login</button>
+        <button @click.prevent="[inputCheck(), tokenData()]">Login</button>
     </form>
 </template>
 
@@ -29,13 +29,12 @@ const member_id = ref('');
 const member_pwd = ref('');
 
 const tokenData = async () => {
-    await axios.post("http://localhost:5174/api/login",
+    await axios.post("http://localhost:5175/api/login",
     {
         memberId: member_id.value,
         memberPwd: member_pwd.value
     }).then ((response) => {    // then: post 요청 성공 시 동작할 콜백 함수 등록
         if(response.status == 200) {
-            // document.cookie => cookie에 담긴 모든 정보 확인(쿠키 사용 시)
             console.log('response status: ', response.status);
             console.log('response data: ', response.data);
 

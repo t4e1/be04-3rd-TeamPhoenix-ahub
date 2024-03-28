@@ -21,13 +21,12 @@
         <div class="space">
             <span @click="changeRouter">Already have an account? <a href="#">Log in</a></span>
         </div>
-        <button @click.prevent="[validateForm(), postData(), changeLoginPage()]">Sign up</button>
+        <button @click.prevent="[validateForm(), postData()]">Sign up</button>
     </form>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
-import { RouterLink } from 'vue-router';
+import { ref } from 'vue';
 
 import axios from 'axios';
 import router from '@/router/router';
@@ -41,7 +40,7 @@ const member_phone = ref('');
 
 const postData = async () => {
     // localhost 포트번호 변경, /api 붙이기
-    await axios.post("http://localhost:5174/api/member/regist", {
+    await axios.post("http://localhost:5175/api/member/regist", {
         memberId: member_id.value,
         memberPwd: member_pwd.value,
         memberName: member_name.value,
@@ -84,13 +83,12 @@ function validateForm() {
         return false;
     } else {
         console.log('회원 정보 입력 확인')
+
+        router.push('/login');
+
         return true;
     }
 }
-
-const changeLoginPage = () => {
-    router.push('/login');
-};
 </script>
 
 <style scoped>
