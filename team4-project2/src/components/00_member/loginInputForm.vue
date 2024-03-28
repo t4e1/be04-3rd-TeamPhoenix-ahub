@@ -36,18 +36,13 @@ const tokenData = async () => {
     }).then ((response) => {    // then: post 요청 성공 시 동작할 콜백 함수 등록
         if(response.status == 200) {
             console.log('response status: ', response.status);
-            console.log('response data: ', response.data);
+            console.log('response headers: ', response.headers);
 
-            // 토큰 저장
-            localStorage.setItem('token', response.data.token)
+            // 토큰 및 아이디 로컬 스토리지에 저장
+            localStorage.setItem('token', response.headers.token)
+            localStorage.setItem('member_id', member_id.value)
 
-            // 헤더에 담긴 memberId 저장
-            const loginMember = response.headers['memberId']
-            localStorage.setItem('memberId', loginMember)
-
-            function changeRouter() {
-                router.push('/member/regist');
-            }
+            router.push('/member/regist');
         }
     }).catch ((e) => {
         console.log('로그인 실패');
