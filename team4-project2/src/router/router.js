@@ -16,6 +16,10 @@ const router = createRouter({
         {
             path: '/board/fairs/:fairId',
             component: () => import('../views/FairPost.vue')
+        },
+        {
+            path: '/board/fairs/edit',
+            component: () => import('../views/FairPostEdit.vue')
         }
     ]
 })

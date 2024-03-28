@@ -37,7 +37,12 @@
         </div>
         <article class="main-article">
             <hr>
-            <FairListContainer />
+            <div v-if="isTrue">
+                <FairListContainer />
+            </div>
+            <div v-if="!isTrue" class="no-search-result">
+                <img src="@/assets/img/nopostimg.png" alt="결과 없음 이미지">
+            </div>
         </article>
         <div class="right-sidebar"></div>
     </section>
@@ -49,9 +54,12 @@
     import FairListContainer from '../components/FairList/FairListContainer.vue';
     import { useRouter } from 'vue-router';
 
+
+
     const search_type = ref('titleContent');
     const search_condition = ref('');
     const postResult = ref([]);
+    const isTrue = ref(true);
 
     /* 입력한 정보(search_type&search_condition) 받아서 axios로 호출 */
     async function callData() {
@@ -63,6 +71,12 @@
 
         postResult.value = response.data.result;
         console.log(postResult.value)
+
+        if ( postResult.value.length == 0 ) {
+            isTrue.value = false;
+        } else { 
+            isTrue.value = true;
+        }
     }
     const router = useRouter();
     function resetBoard() {
@@ -194,5 +208,12 @@ h2 {
     font-size: 12px;
     font-style: bold;
     height: 30px;
+}
+
+.no-search-result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
 }
 </style>

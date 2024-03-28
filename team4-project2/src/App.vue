@@ -37,7 +37,7 @@ import { RouterLink, RouterView } from 'vue-router';
       <div class="icon-div">
         <i class="bi bi-person-circle iconSize"></i>
       </div>
-      <button type="button" class="loginbtn" onclick="login()">로그아웃</button>
+      <button type="button" class="loginbtn" onclick="login()">Log in</button>
     </nav>
     <!-- <div class="logo">
       <RouterLink to="/"><img src="@/assets/img/purple.png" class="logoimage"></RouterLink>
@@ -67,6 +67,7 @@ import { RouterLink, RouterView } from 'vue-router';
   <main>
     <RouterView />
   </main>
+  <hr>
   <footer>
     <div class="leftthings">
       <p>

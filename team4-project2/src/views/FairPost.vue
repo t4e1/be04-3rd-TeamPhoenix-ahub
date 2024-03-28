@@ -3,11 +3,10 @@
         <h1 class="boardname"  @click="toBoard">페어 정보</h1>
     </div>
     <div class="editbtndiv">
-        <button class="editbtn" @click="editPost">게시글 수정</button>
+        <button class="editbtn" @click="toEdit">게시글 수정</button>
     </div>
     <hr class="boardtitleLine">
     <FairPostContent/>
-    <hr>
 </template>
 
 <script setup>
@@ -18,6 +17,10 @@ const router = useRouter();
 
 function toBoard() {
     router.push('/board/fairs');
+}
+
+function toEdit() {
+    router.push('/board/fairs/edit')
 }
 
 </script>

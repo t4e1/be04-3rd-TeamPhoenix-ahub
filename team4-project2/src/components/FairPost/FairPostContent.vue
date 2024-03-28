@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div v-if="isTrue">
         <div class="fairinfo">
             <img :src="fairInfo.thumImage" alt="fair1_img" height="480px" width="370px">
         </div>
@@ -16,7 +16,7 @@
             <button class="tagbtn5">개최일</button>
             <button class="tagbtn6">{{ fairInfo.fairStartdate }}</button>
             <h3>~</h3>
-            <button class="tagbtn7">{{ fairInfo.fairEnddate }}</button>
+            <button class="tagbtn6">{{ fairInfo.fairEnddate }}</button>
         </div>
         <div class="tags-container3">
             <button class="tagbtn8">장소</button>
@@ -32,6 +32,10 @@
             </p>
         </div>
     </div>
+    <div v-if="!isTrue" class="no-post-content">
+        <img src="@/assets/img/no-post-content.png" alt="검색 결과 없음" class="no-post-img">
+    </div>
+    
 </template>
 
 <script setup>
@@ -40,6 +44,7 @@ import { useRoute } from 'vue-router';
 
 const route = useRoute();
 const fairInfo = ref({});
+const isTrue = ref(true);
 
 onMounted(
     async () => {
@@ -47,7 +52,13 @@ onMounted(
         const fairId = route.params.fairId;
         const response = await axios.get(`http://127.0.0.1:8000/board/fairs/${fairId}`);
         fairInfo.value = response.data.result;
-        console.log(fairInfo.value);
+        console.log('테스트',fairInfo.value);
+
+        if (fairInfo.value == undefined) {
+            isTrue.value = false;
+        } else {
+            isTrue.value = true;
+        }
     });
 
 </script>
@@ -96,7 +107,6 @@ onMounted(
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-
 .tagbtn2 {
     border-radius: 20px;
     background-color: #e0f7fa;
@@ -131,6 +141,15 @@ onMounted(
     padding: 10px 20px;
     font-size: 12px;
     font-weight: bold;
+}
+
+.titleLine {
+    width: 70%;
+    margin-left: 15%;
+    height: 2px;
+    border: 0;
+    background-color: grey;
+    margin-top: -4%;
 }
 
 .tagbtn5 {
@@ -214,12 +233,14 @@ onMounted(
     margin-bottom: 20%;
 }
 
-.titleLine {
-    width: 70%;
-    margin-left: 15%;
-    height: 2px;
-    border: 0;
-    background-color: grey;
-    margin-top: -4%;
+.no-post-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}   
+
+.no-post-img {
+    margin-top : 20px;
+    margin-bottom : 60px;
 }
 </style>
