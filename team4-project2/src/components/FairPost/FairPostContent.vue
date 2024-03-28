@@ -9,18 +9,18 @@
         <div class="tags-container1">
             <button class="tagbtn1">태그</button>
             <button class="tagbtn2">#{{ fairInfo.fairTag1 }}</button>
-            <button class="tagbtn9">#{{ fairInfo.fairTag2 }}</button>
-            <button class="tagbtn3">#{{ fairInfo.fairTag3 }}</button>
+            <button class="tagbtn3">#{{ fairInfo.fairTag2 }}</button>
+            <button class="tagbtn4">#{{ fairInfo.fairTag3 }}</button>
         </div>
         <div class="tags-container2">
-            <button class="tagbtn4">개최일</button>
-            <button class="tagbtn5">{{ fairInfo.fairStartdate }}</button>
+            <button class="tagbtn5">개최일</button>
+            <button class="tagbtn6">{{ fairInfo.fairStartdate }}</button>
             <h3>~</h3>
-            <button class="tagbtn6">{{ fairInfo.fairEnddate }}</button>
+            <button class="tagbtn7">{{ fairInfo.fairEnddate }}</button>
         </div>
         <div class="tags-container3">
-            <button class="tagbtn7">장소</button>
-            <button class="tagbtn8">{{ fairInfo.fairLocation }}</button>
+            <button class="tagbtn8">장소</button>
+            <button class="tagbtn9">{{ fairInfo.fairLocation }}</button>
         </div>
         <hr class="titleLine">
         <div class="fairdetaildiv">
@@ -80,7 +80,7 @@ onMounted(
 .tagbtn1,
 .tagbtn2,
 .tagbtn3,
-.tagbtn9 {
+.tagbtn4 {
     border: none;
     padding: 10px 20px;
     font-size: 12px;
@@ -96,11 +96,6 @@ onMounted(
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-.tagbtn9 {
-    border-radius: 20px;
-    background-color: #b6ebb0;
-    color: #528651c6;
-}
 
 .tagbtn2 {
     border-radius: 20px;
@@ -114,6 +109,12 @@ onMounted(
     color: #8c52ff;
 }
 
+.tagbtn4 {
+    border-radius: 20px;
+    background-color: #cbffe3c6;
+    color: #00a84ec6;
+}
+
 .tags-container2 {
     display: flex;
     align-items: center;
@@ -123,25 +124,16 @@ onMounted(
     margin-bottom: 17%;
 }
 
-.tagbtn4,
 .tagbtn5,
-.tagbtn6 {
+.tagbtn6,
+.tagbtn7 {
     border: none;
     padding: 10px 20px;
     font-size: 12px;
     font-weight: bold;
 }
 
-.titleLine {
-    width: 70%;
-    margin-left: 15%;
-    height: 2px;
-    border: 0;
-    background-color: grey;
-    margin-top: -7%;
-}
-
-.tagbtn4 {
+.tagbtn5 {
     border-radius: 10px;
     background-color: white;
     color: black;
@@ -150,7 +142,7 @@ onMounted(
     height: 40px;
 }
 
-.tagbtn5 {
+.tagbtn6 {
     border: 2px solid rgb(185, 182, 195);
     border-radius: 10px;
     background-color: white;
@@ -158,7 +150,7 @@ onMounted(
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-.tagbtn6 {
+.tagbtn7 {
     border: 2px solid rgb(185, 182, 195);
     border-radius: 10px;
     background-color: white;
@@ -175,15 +167,15 @@ onMounted(
     margin-bottom: 16%;
 }
 
-.tagbtn7,
-.tagbtn8 {
+.tagbtn8,
+.tagbtn9 {
     border: none;
     padding: 10px 20px;
     font-size: 12px;
     font-weight: bold;
 }
 
-.tagbtn7 {
+.tagbtn8 {
     border-radius: 10px;
     background-color: white;
     color: black;
@@ -192,7 +184,7 @@ onMounted(
     height: 40px;
 }
 
-.tagbtn8 {
+.tagbtn9 {
     border: 2px solid rgb(185, 182, 195);
     border-radius: 10px;
     background-color: white;
@@ -219,5 +211,15 @@ onMounted(
     margin-left: 20%;
     margin-right: 20%;
     margin-top: -57%;
+    margin-bottom: 20%;
+}
+
+.titleLine {
+    width: 70%;
+    margin-left: 15%;
+    height: 2px;
+    border: 0;
+    background-color: grey;
+    margin-top: -4%;
 }
 </style>
