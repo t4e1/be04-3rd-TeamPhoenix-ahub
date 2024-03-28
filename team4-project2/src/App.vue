@@ -1,5 +1,15 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router';
+import { RouterLink, RouterView, useRouter } from 'vue-router';
+
+const router = useRouter();
+
+function login() {
+  router.push('/login');
+}
+
+function profile() {
+  router.push('/member/findMyprofile/user02');
+}
 
 
 </script>
@@ -16,7 +26,7 @@ import { RouterLink, RouterView } from 'vue-router';
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="font-size:14pt">일반 게시판</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">후기</a></li>
+                <li><a class="dropdown-item" href="#"><RouterLink to="/post/posts">후기</RouterLink></a></li>
                 <li><a class="dropdown-item" href="#">레시피</a></li>
               </ul>
             </li>
@@ -35,9 +45,9 @@ import { RouterLink, RouterView } from 'vue-router';
         </div>
       </div>
       <div class="icon-div">
-        <i class="bi bi-person-circle iconSize"></i>
+        <i class="bi bi-person-circle iconSize" @click="profile"></i>
       </div>
-      <button type="button" class="loginbtn" onclick="login()">Log in</button>
+      <button type="button" class="loginbtn" @click="login">Log in</button>
     </nav>
     <!-- <div class="logo">
       <RouterLink to="/"><img src="@/assets/img/purple.png" class="logoimage"></RouterLink>
