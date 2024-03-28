@@ -44,7 +44,7 @@ import { RouterLink, RouterView } from 'vue-router';
     </div>
     <div id="menu">
 
-      <!-- <ul>
+      <ul>
         <li><a href="#">일반 게시판 ▼</a>
           <ul>
             <li><a href="#"><RouterLink to="/board/fairs">페어 정보</RouterLink></a></li>
@@ -61,7 +61,7 @@ import { RouterLink, RouterView } from 'vue-router';
     <!-- </div> -->
     <!-- <div class="loginbtndiv">
       <button type="button" class="loginbtn" onclick="login()">로그아웃</button>
-    </div> --> -->
+    </div> -->
   </header>
   <!-- <RouterLink to="/board/fairs">Event</RouterLink> -->
   <main>

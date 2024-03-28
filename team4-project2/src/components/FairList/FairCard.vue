@@ -1,16 +1,23 @@
 <template>
-    <div class="postCard" @click="changeRoute(fair.fairId)">
+    <div class="postCard" @click="changeRoute(fair.fairId)" :key="fair">
                     <div class="listImg" >
-                        <!-- <img class="listThumnail" :src="fair.thumImage" alt="thumb"> -->
-                        <img class="listThumnail" src="https://bsiwse.com/data/designImages/POPUP_1709860556.png" alt="thumb">
+                        <img class="listThumnail" :src="fair.thumImage" alt="thumb">
+                        <!-- <img class="listThumnail" src="https://bsiwse.com/data/designImages/POPUP_1709860556.png" alt="thumb"> -->
                     </div>
                     <div class="listContent">
                         <div id="content-title">
-                            <div id="postTitle">
-                                {{ fair.fairTitle }}
+                            <div id="titleNum">
+                                <div id="postTitle">
+                                    {{ fair.fairTitle }}
+                                </div>
+                                <div id="postNum">
+                                    #{{ fair.fairId }}
+                                </div>
                             </div>
-                            <div id="postNum">
-                                #{{ fair.fairId }}
+                            <div class="content-title-tags" >
+                                <button type="button" id="tagbtn1">#{{ fair.fairTag1 }}</button>
+                                <button type="button" id="tagbtn2">#{{ fair.fairTag2 }}</button>
+                                <button type="button" id="tagbtn3">#{{ fair.fairTag3 }}</button>
                             </div>
                         </div>
                         <div id="content-description">
@@ -30,12 +37,12 @@
                                 {{ fair.fairLocation }}
                             </div>
                         </div>
-                    </div>
+                    </div>  
                 </div>
 </template>
 
 <script setup>
-    import { defineProps } from 'vue';
+    import { defineProps, ref } from 'vue';
     import { useRouter } from 'vue-router';
 
     const router = useRouter();
@@ -43,7 +50,7 @@
     const fair = props.fair;
 
     function changeRoute(fairId) {
-        console.log(props);
+        // console.log(props);
         router.push(`/board/fairs/${fairId}`);
     }
 </script>
@@ -91,17 +98,60 @@
 }
 
 .postCard:hover .listContent {
-    filter: blur(0.5px);
+    filter: blur(0.3px);
     border-color: #d490e0;
 }
 
 #content-title{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: flex-end;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
     height: 50px;
+    margin-left: 10px;
+}
 
+#titleNum {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+#titleNum #postNum {
+    margin: 0 auto;
+}
+
+#tagbtn1,
+#tagbtn2,
+#tagbtn3 {
+    border-radius: 20px;
+    border: none;
+    padding: 5px 10px;
+    font-size: 10px;
+    width: 58px;
+    height: 25px;
+    font-weight: bold;
+}
+
+#tagbtn1 {
+    background-color: #e9dfff;
+    color: #8c52ff;
+}
+
+#tagbtn2 {
+    margin-left: 3px;
+    margin-bottom: 1px;
+    background-color: #b6ebb0;
+    color: #528651c6;
+}
+
+#tagbtn3 {
+    margin-left: 3px;
+    margin-bottom: 1px;
+    margin-right: 5px;
+    background-color: #e0f7fa;
+    color: #0072e4c6;
 }
 
 #postTitle{
@@ -123,13 +173,16 @@
     margin: 0 0 0 3px;
     color:rgb(73, 70, 70);
     font-size: 12px;
+    margin-left: 10px;
 }
 
 #content-location {
     display: flex;
     flex-direction: row;
     height: 50px;
+    margin-left: 10px;
 }
+
 .locationitem {
     font-size:9pt ;
     width: 80px;

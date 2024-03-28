@@ -9,7 +9,7 @@
     import FairCard from "./FairCard.vue";
 
     const fairList = inject('postResult')
-    defineProps(['fairList']);
+    // defineProps(['fairList']);
 
     onMounted(async () => {
         const response = await axios.get(`http://127.0.0.1:8000/board/fairs/lists?search_type=titleContent&search_condition=`);

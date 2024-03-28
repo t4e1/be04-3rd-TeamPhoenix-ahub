@@ -11,14 +11,14 @@
 
             <!-- The slideshow/carousel -->
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="@/assets/img/banner1.png" alt="banner_img" height="200" width="100%">
+                <div class="carousel-item active" @click="toPost(3)">
+                    <img src="@/assets/img/banner3.png" alt="banner_img" height="200" width="100%">
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item" @click="toPost(2)">
                     <img src="@/assets/img/banner2.png" alt="banner_img" height="200" width="100%">
                 </div>
-                <div class="carousel-item">
-                    <img src="@/assets/img/banner3.png" alt="banner_img" height="200" width="100%">
+                <div class="carousel-item" @click="toPost(4)">
+                    <img src="@/assets/img/banner1.png" alt="banner_img" height="200" width="100%">
                 </div>
             </div>
 
@@ -34,11 +34,21 @@
 </template>
 
 <script setup>
+    import { useRouter } from 'vue-router';
 
+    const router = useRouter();
+    function toPost(num) {
+        router.push(`/board/fairs/${num}`)
+    }
 </script>
 
 <style scoped>
 .banner {
     grid-area: banner;
 }
+
+.carousel-inner :hover {
+    cursor: pointer;
+}
+
 </style>
