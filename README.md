@@ -89,6 +89,43 @@
 
 ## 4-2. 테스트 결과 영상
 
+<details>
+<summary>게시판 기능</summary>
+
+
+
+
+
+<details>
+<summary>게시글 목록 조회</summary>
+
+
+
+</details>
+
+<details>
+<summary>게시글 내용 조회</summary>
+
+
+
+</details>
+
+<details>
+<summary>게시글 댓글 조회</summary>
+
+
+
+</details>
+
+<details>
+<summary>게시글 댓글 삭제</summary>
+
+
+
+</details>
+
+</details>
+
 
 
 
