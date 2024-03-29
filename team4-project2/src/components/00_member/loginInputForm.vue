@@ -29,7 +29,7 @@ const member_id = ref('');
 const member_pwd = ref('');
 
 const tokenData = async () => {
-    await axios.post("http://localhost:5175/api/login",
+    await axios.post("http://localhost:5173/api/login",
     {
         memberId: member_id.value,
         memberPwd: member_pwd.value
@@ -42,7 +42,7 @@ const tokenData = async () => {
             localStorage.setItem('token', response.headers.token)
             localStorage.setItem('member_id', member_id.value)
 
-            router.push('/member/regist');
+            router.push('/');
         }
     }).catch ((e) => {
         console.log('로그인 실패');
