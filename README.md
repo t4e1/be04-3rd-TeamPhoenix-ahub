@@ -142,16 +142,64 @@ https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/9e3f487b-6
 <details>
 <summary>로그인 화면 이동</summary>
 
+https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/87284220/a63c109b-4517-4f1b-8dd4-0a4431216a92
+
 </details>
 
 <details>
 <summary>프로필 화면 이동</summary>
 
+https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/87284220/41d036b0-3ff8-4907-a910-ce1bf022629c
+
 </details>
 
 ### 회원 정보
 <details>
-<summary> </summary>
+<summary>회원 가입</summary>
+
+https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/87284220/32c54e70-7dcb-4a68-99be-6eea401c772e
+
+</details>
+
+<details>
+<summary>회원 가입 정보 미입력</summary>
+
+https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/87284220/a13e4329-9b13-4699-8684-95fb105e23a1
+
+</details>
+
+<details>
+<summary>회원 약관 미동의</summary>
+
+https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/87284220/2ae75125-8b16-4b7f-be0b-6cc605a1276c
+
+</details>
+
+<details>
+<summary>로그인</summary>
+
+https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/87284220/8587c3a0-a93f-44d3-bb94-dd90e1d83ec4
+
+</details>
+
+<details>
+<summary>로그인 실패</summary>
+
+https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/87284220/311b22ea-0438-4804-a5a1-15044a804521
+
+</details>
+
+<details>
+<summary>회원 프로필 조회</summary>
+
+https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/87284220/4947eba8-2872-46a4-bc11-dd96ab51ea79
+
+</details>
+
+<details>
+<summary>로그아웃</summary>
+
+https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/87284220/4c70f16d-7059-4a85-aeb9-b2680b421fe0
 
 </details>
 
