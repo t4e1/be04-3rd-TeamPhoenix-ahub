@@ -66,7 +66,7 @@
 <details>
 <summary>구현 영상</summary>
 
-
+https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/994a3f47-f3a3-45ee-a6e9-4dbeb1d06eaa
 
 </details>
 
@@ -76,6 +76,8 @@
 
 <details>
 <summary>구현 영상</summary>
+
+https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/f00fd9e7-2fb6-4b83-8cbe-85a3c32ed4a9
 
 </details>
 
