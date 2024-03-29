@@ -157,6 +157,8 @@ https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/f00fd9e7-2
 <details>
 <summary>배너 라우팅</summary>
 
+https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/464bef5d-40df-4da5-bdda-6a84c8313591
+
 </details>
 
 ### 후기 게시판
