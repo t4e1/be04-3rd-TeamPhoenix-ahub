@@ -233,6 +233,8 @@ https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/31a967b2-e
 <details>
 <summary>게시판 새로 고침</summary>
 
+https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/1153ffb3-afaf-4b76-9063-8f3b82d9da86
+
 </details>
 
 <details>
