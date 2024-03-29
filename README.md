@@ -89,8 +89,7 @@
 
 ## 4-2. 테스트 결과 영상
 
-<details>
-<summary>게시판 기능</summary>
+### 게시판 기능
 
 
 
@@ -121,8 +120,6 @@
 <summary>게시글 댓글 삭제</summary>
 
 
-
-</details>
 
 </details>
 
