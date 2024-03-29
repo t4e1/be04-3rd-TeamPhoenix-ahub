@@ -112,7 +112,7 @@ https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/08908491-2
 <details>
 <summary>게시글 댓글 조회</summary>
 
-
+https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/2bde0fca-21dd-4272-b19e-4d415a987f34
 
 </details>
 
