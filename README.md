@@ -58,7 +58,19 @@
 # 3. 와이어 프레임 및 기능 명세서, 화면 설계서
 
 ## 3-1 visily를 활용한 화면 디자인
+- **와이어 프레임**
+![image](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/108782390/ec0a5964-28e4-4dc3-adfa-004adebc0404)
 
+- **회원 관련 와이어 프레임**
+![image](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/108782390/929199ec-a423-49dc-b5bb-d3f98cf98fa5)
+
+- **게시판 관련 와이어 프레임** 
+![image](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/108782390/54082215-6095-4ac8-ba66-bcc0150cf687)
+
+<details>
+<summary>구현 영상</summary>
+
+</details>
 
 
 ## 3-2. 실제 구현 기능 명세서/화면 설계서
