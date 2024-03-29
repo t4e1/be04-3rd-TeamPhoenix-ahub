@@ -98,14 +98,14 @@
 <details>
 <summary>게시글 목록 조회</summary>
 
-
+https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/e2b01791-16a1-4a9d-a822-944aa3db3c9c
 
 </details>
 
 <details>
 <summary>게시글 내용 조회</summary>
 
-
+https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/08908491-251c-4cf9-b117-e6a679908447
 
 </details>
 
