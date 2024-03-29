@@ -44,7 +44,7 @@ import { useRoute } from 'vue-router';
 
 const route = useRoute();
 const fairInfo = ref({});
-const isTrue = ref(true);
+const isTrue = ref(false);
 
 onMounted(
     async () => {
@@ -54,6 +54,9 @@ onMounted(
         fairInfo.value = response.data.result;
         console.log('테스트',fairInfo.value);
 
+        if (!isNaN(fairId)) {
+            isTrue.value = true;
+        }
         if (fairInfo.value == undefined) {
             isTrue.value = false;
         } else {
