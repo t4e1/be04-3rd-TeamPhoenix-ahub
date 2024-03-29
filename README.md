@@ -89,15 +89,37 @@ https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/f00fd9e7-2
 ![image](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/108782390/da10fb86-b310-4118-9a11-ccc80e589d91)
 
 ### 3-2-2. 화면 설계서
+- 로그인 화면
+
+![슬라이드7](https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/aded6512-39a7-4329-8a2e-eee4f4b14563)
+
+- 회원가입 화면
+
+![슬라이드8](https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/3aef0203-a21c-416f-809d-be0f27b3daf6)
+  
+- 마이페이지 화면
+
+![슬라이드9](https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/47c56112-c5fb-44bf-868d-f6725a6c0385)
+  
 - 메인화면
+
+![슬라이드4](https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/d0de04e7-bb7e-4f50-b538-e02dee60d5f4)
 
 - 게시판 화면
 
+![슬라이드2](https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/04df1258-fcd7-42db-a97d-a0773e487960)
+
 - 게시판 상세게시글 화면
+
+![슬라이드1](https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/4eeaeacf-b29c-4635-8c35-f80083df5b27)
 
 - 페어정보 화면
 
+![슬라이드3](https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/b93e378e-0f84-4619-8961-1aeb29921339)
+
 - 페어정보 상세게시글 화면
+
+![슬라이드5](https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/285340c8-8795-482a-8841-c34205a8a947)
 
 <br>
 
