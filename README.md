@@ -84,16 +84,30 @@
 
 # 4. 테스트 계획 및 결과
 
-## 4-1. 테스트 계획 및 결과 보고서
-
+## 4-1. 테스트 케이스 정의서
+![image](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/108782390/68a3ccf6-d8eb-4142-b944-205536c2057f)
 
 ## 4-2. 테스트 결과 영상
 
-### 게시판 기능
+### 헤더
+<details>
+<summary> </summary>
 
+</details>
 
+### 회원 정보
+<details>
+<summary> </summary>
 
+</details>
 
+### 배너
+<details>
+<summary> </summary>
+
+</details>
+
+### 후기 게시판
 
 <details>
 <summary>게시글 목록 조회</summary>
@@ -123,7 +137,11 @@ https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/88d0a5ad-0
 
 </details>
 
+### 페어 게시판
+<details>
+<summary> </summary>
 
+</details>
 
 
 <br>
