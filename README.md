@@ -51,7 +51,8 @@
 
 # 2. 요구사항 명세서
 
-![image](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/108782390/d90c5c5e-1c99-4a7b-913a-78534e868de5)
+![image](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/108782390/ede2047d-ed89-405b-ae9f-a606f0c043c9)
+
 
 <br>
 
@@ -97,8 +98,6 @@ https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/f00fd9e7-2
 - 페어정보 화면
 
 - 페어정보 상세게시글 화면
-
-
 
 <br>
 
