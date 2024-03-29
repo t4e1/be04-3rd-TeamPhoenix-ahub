@@ -149,7 +149,7 @@ https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/87284220/a63c
 <details>
 <summary>프로필 화면 이동</summary>
 
-https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/87284220/bc6d4567-e963-4238-b3fd-c32a15193d40
+https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/87284220/2dbbfede-0abf-4441-9684-b5e4ff053df2
 
 </details>
 
@@ -192,7 +192,7 @@ https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/87284220/311b
 <details>
 <summary>회원 프로필 조회</summary>
 
-https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/87284220/4947eba8-2872-46a4-bc11-dd96ab51ea79
+https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/87284220/5722af2f-cbdc-42db-baad-a2120c83c720
 
 </details>
 
