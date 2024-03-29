@@ -149,7 +149,7 @@ https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/87284220/a63c
 <details>
 <summary>프로필 화면 이동</summary>
 
-https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/87284220/41d036b0-3ff8-4907-a910-ce1bf022629c
+https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/87284220/bc6d4567-e963-4238-b3fd-c32a15193d40
 
 </details>
 
