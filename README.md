@@ -195,6 +195,9 @@ https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/88d0a5ad-0
 <details>
 <summary>전체 게시글 목록 조회</summary>
 
+https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/2f503d3b-f775-4783-9b43-6313aae60eff
+
+
 </details>
 
 <details>
