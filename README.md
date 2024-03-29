@@ -135,6 +135,8 @@ https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/f00fd9e7-2
 <details>
 <summary>페이지 이동</summary>
 
+https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/9e3f487b-67c5-42ba-b8ae-b54c5a327310
+
 </details>
 
 <details>
@@ -203,20 +205,28 @@ https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/2f503d3b-f
 <details>
 <summary>게시글 검색</summary>
 
+https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/5166857b-2bf0-45e7-b732-4b09a4ea7ca2
+
 </details>
 
 <details>
 <summary>게시글 검색(검색어 X)</summary>
+
+https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/90d1b901-9a1b-4bca-be2e-6263b4c0b76a
 
 </details>
 
 <details>
 <summary>게시글 내용 조회</summary>
 
+https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/f5ab9766-323d-4fee-b3df-4a389249b873
+
 </details>
 
 <details>
 <summary>게시글 내용 조회(잘못된 게시글 번호)</summary>
+
+https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/31a967b2-efb2-4e18-bcd1-ce3d969a7ccf
 
 </details>
 
@@ -227,6 +237,8 @@ https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/2f503d3b-f
 
 <details>
 <summary>게시글 수정</summary>
+
+https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/161cf404-df20-42c3-a0b0-9a8893e3b9c2
 
 </details>
 
