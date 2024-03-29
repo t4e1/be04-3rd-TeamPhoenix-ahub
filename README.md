@@ -109,7 +109,17 @@
 
 ### 헤더
 <details>
-<summary> </summary>
+<summary>페이지 이동</summary>
+
+</details>
+
+<details>
+<summary>로그인 화면 이동</summary>
+
+</details>
+
+<details>
+<summary>프로필 화면 이동</summary>
 
 </details>
 
@@ -121,7 +131,7 @@
 
 ### 배너
 <details>
-<summary> </summary>
+<summary>배너 라우팅</summary>
 
 </details>
 
@@ -157,10 +167,39 @@ https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/88d0a5ad-0
 
 ### 페어 게시판
 <details>
-<summary> </summary>
+<summary>전체 게시글 목록 조회</summary>
 
 </details>
 
+<details>
+<summary>게시글 검색</summary>
+
+</details>
+
+<details>
+<summary>게시글 검색(검색어 X)</summary>
+
+</details>
+
+<details>
+<summary>게시글 내용 조회</summary>
+
+</details>
+
+<details>
+<summary>게시글 내용 조회(잘못된 게시글 번호)</summary>
+
+</details>
+
+<details>
+<summary>게시판 새로 고침</summary>
+
+</details>
+
+<details>
+<summary>게시글 수정</summary>
+
+</details>
 
 <br>
 
