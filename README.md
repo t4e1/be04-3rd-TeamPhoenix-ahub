@@ -119,7 +119,7 @@
 <details>
 <summary>게시글 댓글 삭제</summary>
 
-
+https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/88d0a5ad-044c-41ad-9fa5-786750d65faf
 
 </details>
 
