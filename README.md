@@ -63,6 +63,13 @@
 
 - **회원 관련 와이어 프레임**
 ![image](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/108782390/929199ec-a423-49dc-b5bb-d3f98cf98fa5)
+<details>
+<summary>구현 영상</summary>
+
+
+
+</details>
+
 
 - **게시판 관련 와이어 프레임** 
 ![image](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/108782390/54082215-6095-4ac8-ba66-bcc0150cf687)
