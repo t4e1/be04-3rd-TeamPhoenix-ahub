@@ -105,7 +105,8 @@ https://github.com/dongh810/AlcoholHub-Front_Project/assets/105986200/f00fd9e7-2
 # 4. 테스트 계획 및 결과
 
 ## 4-1. 테스트 케이스 정의서
-![image](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/108782390/68a3ccf6-d8eb-4142-b944-205536c2057f)
+![image](https://github.com/beyond-sw-camp/be04-3rd-TeamPhoenix-ahub/assets/108782390/164d5eae-27a2-4fc3-91ee-331f825b4761)
+
 
 ## 4-2. 테스트 결과 영상
 
