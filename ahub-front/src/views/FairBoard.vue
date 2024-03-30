@@ -31,7 +31,7 @@
                 </div>
 
                 <div id="search-2">
-                    <button type="button" id="writeBtn" class="btn btn-primary">게시글 작성</button>
+                    <button type="button" id="writeBtn" class="btn btn-primary" @click="addPost">게시글 작성</button>
                 </div>
             </div>
         </div>
@@ -54,20 +54,14 @@
     import FairListContainer from '../components/FairList/FairListContainer.vue';
     import { useRouter } from 'vue-router';
 
-
-
     const search_type = ref('titleContent');
     const search_condition = ref('');
     const postResult = ref([]);
     const isTrue = ref(true);
 
-    /* 입력한 정보(search_type&search_condition) 받아서 axios로 호출 */
     async function callData() {
 
-        const response = await axios.get(`http://127.0.0.1:8000/board/fairs/lists?search_type=${search_type.value}&search_condition=${search_condition.value}`);
-        // const searchList = response.data;
-        // console.log(searchList);
-        // console.log(JSON.stringify(searchList.result, null, 2));
+        const response = await axios.get(`http://localhost:8000/board/fairs/lists?search_type=${search_type.value}&search_condition=${search_condition.value}`);
 
         postResult.value = response.data.result;
         console.log(postResult.value)
@@ -82,6 +76,9 @@
     function resetBoard() {
         router.go(0);
     }   
+    function addPost() {
+        router.push('/board/fairs/new');
+    }
 
     provide('postResult', postResult);
 

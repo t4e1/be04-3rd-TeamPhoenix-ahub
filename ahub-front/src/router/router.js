@@ -40,7 +40,13 @@ const router = createRouter({
         {
             path: '/member/findMyprofile/:id',
             component: () => import('../views/profilePage.vue')
+        },
+        {
+            path: '/board/fairs/new',
+            component: () => import('../views/FairPostAdd.vue')
         }
+
+
 
     ]
 })

@@ -6,8 +6,8 @@
 </template>
 
 <script setup>
-    import profileTitle from '@/components/00_member/profileTitle.vue';
-    import profileGrid from '@/components/00_member/profileGrid.vue';
+    import profileTitle from '@/components/Member/profileTitle.vue';
+    import profileGrid from '@/components/Member/profileGrid.vue';
 </script>
 
 <style scoped>

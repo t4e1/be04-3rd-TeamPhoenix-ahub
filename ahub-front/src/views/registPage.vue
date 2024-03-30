@@ -9,8 +9,8 @@
 
 <script setup>
 import { useRoute } from 'vue-router';
-import registTitle from '@/components/00_member/registTitle.vue';
-import registInputForm from '@/components/00_member/registInputForm.vue';
+import registTitle from '@/components/Member/registTitle.vue';
+import registInputForm from '@/components/Member/registInputForm.vue';
 
 const currnetRoute = useRoute();
 

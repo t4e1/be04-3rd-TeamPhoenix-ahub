@@ -8,8 +8,8 @@
 </template>
 
 <script setup>
-import loginTitle from '@/components/00_member/loginTitle.vue';
-import loginInputForm from '@/components/00_member/loginInputForm.vue';
+import loginTitle from '@/components/Member/loginTitle.vue';
+import loginInputForm from '@/components/Member/loginInputForm.vue';
 </script>
 
 <style scoped>

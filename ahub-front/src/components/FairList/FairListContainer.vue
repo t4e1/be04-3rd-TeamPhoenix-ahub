@@ -12,7 +12,7 @@
     // defineProps(['fairList']);
 
     onMounted(async () => {
-        const response = await axios.get(`http://127.0.0.1:8000/board/fairs/lists?search_type=titleContent&search_condition=`);
+        const response = await axios.get(`http://localhost:8000/board/fairs/lists?search_type=titleContent&search_condition=`);
         // fairs.value = response.data.result;
         // console.log(fairs.value);
 
