@@ -201,8 +201,7 @@ $(document).ready(function () {
         ], // 글꼴 크기 옵션
 
         callbacks: {
-            onImageUpload: function (files, editor, welEditable) {
-                // 파일 업로드(다중업로드를 위해 반복문 사용)
+            onImageUpload: function (files) {
                 for (var i = files.length - 1; i >= 0; i--) {
                     uploadSummernoteImageFile(files[i],
                         this);
@@ -210,14 +209,13 @@ $(document).ready(function () {
                 }
             }
         }
-    }),
-        $('#summernote').summernote(setting);
+    })
 });
 
 function uploadSummernoteImageFile(file, el) {
-    data = new FormData();
+    var data = new FormData();
     data.append("file", file);
-    $.ajax({
+    var response = $.ajax({
         data: data,
         type: "POST",
         url: "http://localhost:8000/board/fairs/uploadSummernoteImageFile",
@@ -228,6 +226,9 @@ function uploadSummernoteImageFile(file, el) {
             $(el).summernote('editor.insertImage', data.url);
         }
     });
+    
+    console.log(response);
+
 }
 
 </script>
