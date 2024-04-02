@@ -113,7 +113,6 @@
                     </div>
                 </div>
                 <div class="oc-files">
-                    등록한 파일들 미리보기 장소
                 </div>
             </div>
         </div>
@@ -202,34 +201,74 @@ $(document).ready(function () {
 
         callbacks: {
             onImageUpload: function (files) {
-                for (var i = files.length - 1; i >= 0; i--) {
-                    uploadSummernoteImageFile(files[i],
-                        this);
-
-                }
+                // for (var i = files.length - 1; i >= 0; i--) {
+                //     uploadSummernoteImageFile(files[i],
+                //         this);   
+                RealTimeImageUpdate(files, this);
             }
         }
     })
 });
 
-function uploadSummernoteImageFile(file, el) {
-    var data = new FormData();
-    data.append("file", file);
-    var response = $.ajax({
-        data: data,
-        type: "POST",
-        url: "http://localhost:8000/board/fairs/uploadSummernoteImageFile",
-        contentType: false,
-        enctype: 'multipart/form-data',
-        processData: false,
-        success: function (data) {
-            $(el).summernote('editor.insertImage', data.url);
+function RealTimeImageUpdate(files, editor) {
+    var formData = new FormData();
+    var fileArr = Array.prototype.slice.call(files);
+    fileArr.forEach(function (f) {
+        if (f.type.match("image/jpg") || f.type.match("image/jpeg" || f.type.match("image/jpeg"))) {
+            alert("JPG, JPEG, PNG 확장자만 업로드 가능합니다.");
+            return;
         }
     });
-    
-    console.log(response);
+    for (var xx = 0; xx < files.length; xx++) {
+        formData.append("file", files[xx]);
+    }
 
+    $.ajax({
+        url: "http://localhost:10000/upload",
+        data: formData,
+        cache: false,
+        contentType: false,
+        processData: false,
+        enctype: 'multipart/form-data',
+        type: 'POST',
+        success: function (result) {
+
+            //항상 업로드된 파일의 url이 있어야 한다.
+            if (result === -1) {
+                alert('이미지 파일이 아닙니다.');
+                return;
+            }
+            console.log(JSON.parse(result));
+            var data = JSON.parse(result);
+            for (var x = 0; x < data.length; x++) {
+                var img = $("<img>").attr({ src: data[x], width: "100%" });   // Default 100% ( 서비스가 앱이어서 이미지 크기를 100% 설정 - But 수정 가능 )
+                console.log(img);
+                $(editor).summernote('pasteHTML', "<img src='" + data[x] + "' style='width:100%;' />");
+            }
+
+        }
+    });
 }
+
+
+// function uploadSummernoteImageFile(file, el) {
+//     var data = new FormData();
+//     data.append("file", file);
+//     var response = $.ajax({
+//         data: data,
+//         type: "POST",
+//         url: "http://localhost:8000/board/fairs/uploadSummernoteImageFile",
+//         contentType: false,
+//         enctype: 'multipart/form-data',
+//         processData: false,
+//         success: function (data) {
+//             $(el).summernote('editor.insertImage', data.url);
+//         }
+//     });
+
+//     console.log(response);
+
+// }
 
 </script>
 
