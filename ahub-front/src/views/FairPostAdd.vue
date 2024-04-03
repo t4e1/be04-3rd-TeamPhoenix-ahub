@@ -60,7 +60,7 @@
                 <div class="oc-tags">
                     <div class="oc-tags-1">태그</div>
                     <div class="oc-tags-2">
-                        <div class="col-sm-8">
+                        <div class="col-sm-8 oc-tags-2-1">
                             <div class="form-check form-check-inline">
                                 <label class="form-check-label">
                                     <input type="checkbox" class="form-check-input" value="와인"
@@ -214,7 +214,7 @@ function RealTimeImageUpdate(files, editor) {
     var formData = new FormData();
     var fileArr = Array.prototype.slice.call(files);
     fileArr.forEach(function (f) {
-        if (f.type.match("image/jpg") || f.type.match("image/jpeg" || f.type.match("image/jpeg"))) {
+        if (f.type.match("image/jpg") || f.type.match("image/jpeg" || f.type.match("image/png"))) {
             alert("JPG, JPEG, PNG 확장자만 업로드 가능합니다.");
             return;
         }
@@ -241,6 +241,8 @@ function RealTimeImageUpdate(files, editor) {
             console.log(JSON.parse(result));
             var data = JSON.parse(result);
             for (var x = 0; x < data.length; x++) {
+                // const a = data[x].substr(23);
+                console.log(data[x]);
                 var img = $("<img>").attr({ src: data[x], width: "100%" });   // Default 100% ( 서비스가 앱이어서 이미지 크기를 100% 설정 - But 수정 가능 )
                 console.log(img);
                 $(editor).summernote('pasteHTML', "<img src='" + data[x] + "' style='width:100%;' />");
@@ -254,7 +256,7 @@ function RealTimeImageUpdate(files, editor) {
 // function uploadSummernoteImageFile(file, el) {
 //     var data = new FormData();
 //     data.append("file", file);
-//     var response = $.ajax({
+//     var response = $.ajax({  
 //         data: data,
 //         type: "POST",
 //         url: "http://localhost:8000/board/fairs/uploadSummernoteImageFile",
@@ -396,12 +398,14 @@ main {
     display: flex;
     flex-direction: row;
     border-bottom: solid 1px;
+    flex-wrap: wrap;
 }
 
 .oc-tags-1 {
     width: 15%;
 
     border-right: solid 1px;
+    height: 100%;
 }
 
 .oc-tags-2 {
@@ -409,6 +413,11 @@ main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    height: 100%;
+}
+
+.oc-tags-2-1 {
+    width: 100%;
 }
 
 .oc-files {
