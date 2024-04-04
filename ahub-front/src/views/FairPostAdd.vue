@@ -117,7 +117,7 @@
             </div>
         </div>
         <div class="content">
-            <textarea name="fairContent" id="summernote" placeholder="내용을 입력해주세요!">
+            <textarea name="fairContent" id="summernote">
             </textarea>
         </div>
         <!-- <button type='button' @click="summernotecheck">확인하기 </button> -->
@@ -203,7 +203,7 @@ $(document).ready(function () {
             onImageUpload: function (files) {
                 // for (var i = files.length - 1; i >= 0; i--) {
                 //     uploadSummernoteImageFile(files[i],
-                //         this);   
+                //         this);   s
                 RealTimeImageUpdate(files, this);
             }
         }
@@ -212,13 +212,13 @@ $(document).ready(function () {
 
 function RealTimeImageUpdate(files, editor) {
     var formData = new FormData();
-    var fileArr = Array.prototype.slice.call(files);
-    fileArr.forEach(function (f) {
-        if (f.type.match("image/jpg") || f.type.match("image/jpeg" || f.type.match("image/png"))) {
-            alert("JPG, JPEG, PNG 확장자만 업로드 가능합니다.");
-            return;
-        }
-    });
+    // var fileArr = Array.prototype.slice.call(files);
+    // fileArr.forEach(function (f) {
+    //     if (f.type.match("image/jpg") || f.type.match("image/jpeg" || f.type.match("image/png"))) {
+    //         alert("JPG, JPEG, PNG 확장자만 업로드 가능합니다.");
+    //         return;
+    //     }
+    // });
     for (var xx = 0; xx < files.length; xx++) {
         formData.append("file", files[xx]);
     }
@@ -238,14 +238,13 @@ function RealTimeImageUpdate(files, editor) {
                 alert('이미지 파일이 아닙니다.');
                 return;
             }
-            console.log(JSON.parse(result));
-            var data = JSON.parse(result);
-            for (var x = 0; x < data.length; x++) {
+
+            for (var x = 0; x < result.length; x++) {
                 // const a = data[x].substr(23);
-                console.log(data[x]);
-                var img = $("<img>").attr({ src: data[x], width: "100%" });   // Default 100% ( 서비스가 앱이어서 이미지 크기를 100% 설정 - But 수정 가능 )
+                console.log(result[x]);
+                var img = $("<img>").attr({ src: result[x], width: "100%" });   // Default 100% ( 서비스가 앱이어서 이미지 크기를 100% 설정 - But 수정 가능 )
                 console.log(img);
-                $(editor).summernote('pasteHTML', "<img src='" + data[x] + "' style='width:100%;' />");
+                $(editor).summernote('pasteHTML', "<img src=" + result[x] + " style='width:100%;' />");
             }
 
         }
